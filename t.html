@@ -18,7 +18,7 @@
         setTimeout(function () {
             if (!hasApp) {
                 //没有安装微信
-                var r = confirm("您没有安装微信，请先安装微信!");
+                var r = confirm("您没有安装skype，请先安装微信!");
                 if (r == true) {
                     location.href = "http://weixin.qq.com/"
                 }
@@ -55,8 +55,6 @@
                 iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
                 iPad: u.indexOf('iPad') > -1, //是否iPad
                 webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
-                weixin: u.indexOf('MicroMessenger') > -1, //是否微信 （2015-01-22新增）
-                qq: u.match(/\sQQ/i) == " qq", //是否QQ
 		skype:u.match(/\sskype/i) == "skype"
             };
         }(),
