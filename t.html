@@ -14,7 +14,12 @@
 <a href="skype:+8613240020366?call" onclick="return skypeCheck();">呼叫skype</a>
 <script type="text/javascript" src="http://www.54kefu.net/images/skypeCheck40.js"></script>
 <a href=" skype: 帐号?call" onclick="return skypeCheck();"><img src=" http://skin.54kefu.net/icon/small_white_online.png" style="border: none;" alt="Call me!" /></a><a href="skype: 帐号?call" onclick="return skypeCheck();">称谓</a>
-<script>
+    <a href="#" id="a1">a onclick</a>
+    <script>
+        var a = document.getElementById('a1');
+        a.onclick = function(){
+            alert(0)
+        }
     function testApp(url) {
         var timeout, t = 1000, hasApp = true;
         setTimeout(function () {
