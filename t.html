@@ -83,6 +83,33 @@ _notice.style.top=Math.max(0,Math.floor(clientHeight/2-152))+"px";_notice.style.
         language: (navigator.browserLanguage || navigator.language).toLowerCase()
     }
 </script>
-
+	<script>
+	function checkInstalled(m){
+        switch (m) {
+            case 'msn':
+                try {
+                    new ActiveXObject("MSNMessenger.P4QuickLaunch");
+                    return true;
+                } catch(e) {
+                    return false;
+                }
+            case 'skype':
+                try {
+                    new ActiveXObject("Skype.Detection");
+                    return true;
+                } catch(e) {
+                    return false;
+                }
+            case 'qq':
+                try {
+                    new ActiveXObject("TimwpDll.TimwpCheck");
+                    return true;
+                } catch(e) {
+                    return false;
+                }
+        }
+    }
+    console.log(checkInstalled('skype'));
+	</script>
 </body>
 </html>
