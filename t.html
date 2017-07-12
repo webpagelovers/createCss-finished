@@ -40,39 +40,8 @@
             }
         }, t);
     }
-	
-	
-checkInstalled = function(m) {
-    switch (m) {
-    case 'msn':
-        try {
-            new ActiveXObject("MSNMessenger.P4QuickLaunch");
-            return true;
-        } catch (e) {
-            return false;
-        }
-    case 'qq':
-        try {
-            new ActiveXObject("TimwpDll.TimwpCheck");
-            return true;
-        } catch (e) {
-            return false;
-        }
-    case 'skype':
-        try {
-            new ActiveXObject("Skype.Detection");
-            return true;
-        } catch (e) {
-            return false;
-        }
 
-    }
-}
 </script>
-<br>
-<input type="button" value="检测有没有安装MSN" onclick="alert(checkInstalled('msn'))" />
-  <input type="button" value="检测有没有安装QQ" onclick="alert(checkInstalled('qq'))" />
-  <input type="button" value="检测有没有安装SKYPE" onclick="alert(checkInstalled('skype'))" />  	
-	
+
 </body>
 </html>
