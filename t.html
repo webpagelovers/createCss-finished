@@ -42,31 +42,39 @@
     }
 
 </script>
-    <script>
-    if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {  
-  var loadDateTime = new Date();  
-  window.setTimeout(function() {  
-   var timeOutDateTime = new Date();  
-   if (timeOutDateTime - loadDateTime < 5000) {  
-    window.location = "skype:+8613240020366?call";  
-   } else {  
-    window.close();  
-   }  
-  },  
-  25);  
-  window.location = "skype:// ";  
- } else if (navigator.userAgent.match(/android/i)) {  
-  var state = null;  
-  try {  
-   state = window.open("skype:// ", '_blank');  
-  } catch(e) {}  
-  if (state) {  
-   window.close();  
-  } else {  
-   window.location = "skype:+8613240020366?call";  
-  }  
- }  
-    </script>
+<script>
+if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+    var loadDateTime = new Date();
+    window.setTimeout(function () {
+            var timeOutDateTime = new Date();
+            if (timeOutDateTime - loadDateTime < 5000) {
+                window.location = "skype:+8613240020366?call";
+                alert(4)
+            } else {
+                alert(5)
+                window.close();
+            }
+        },
+        25);
+    window.location = "skype:// ";
+} else if (navigator.userAgent.match(/android/i)) {
+    var state = null;
+    try {
+        alert(0)
+        state = window.open("skype:// ", '_blank');
+    } catch (e) {
+        alert(1)
+    }
+    if (state) {
+        alert(2)
+        window.close();
+    } else {
+        alert(3)
+        window.location = "skype:+8613240020366?call";
+    }
+}
+
+</script>
 
 </body>
 </html>
