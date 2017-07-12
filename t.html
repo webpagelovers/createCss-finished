@@ -19,8 +19,9 @@ if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
     window.setTimeout(function () {
             var timeOutDateTime = new Date();
             if (timeOutDateTime - loadDateTime < 5000) {
-                window.location = "skype:+8613240020366?call";
                 alert(4)
+                window.location = "skype:+8613240020366?call";
+                
             } else {
                 alert(5)
                 window.close();
@@ -29,6 +30,7 @@ if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
         25);
     alert(6)
     window.location = "skype:// ";
+    alert(7)
     
     /* var state2 = null;
     try {
