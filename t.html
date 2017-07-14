@@ -15,7 +15,9 @@
 <script>
 $('.a').on('touchstart ',function(event) {    
      event.preventDefault();
-     $(this).longTap();
+     $(this).on("longtap",function(){
+         alert(1)
+     })
 });
 </script>
 
