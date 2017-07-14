@@ -27,11 +27,13 @@ $.fn.longPress = function(fn) {
     }
 }
 $('.a').on('touchstart ',function(event) {    
-     event.preventDefault();
-     $('.a').longPress(function(){
-        alert(1)
-     })
+     //event.preventDefault();
+    alert(0)
+     
 });
+$('.a').longPress(function(){
+    alert(1)
+})
 
 </script>
 
