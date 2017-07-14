@@ -26,12 +26,8 @@ $.fn.longPress = function(fn) {
             }, false);
     }
 }
-$('.a').on('touchstart ',function(event) {    
-     //event.preventDefault();
-    alert(0)
-     
-});
-$('.a').longPress(function(){
+$('.a').longPress(function(event){
+    event.preventDefault();
     alert(1)
 })
 
