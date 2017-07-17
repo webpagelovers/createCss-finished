@@ -12,20 +12,37 @@
 <a href="sms:13764567708">移动WEB页面JS一键发送短信咨询功能</a><br/>
 <a href="wtai://wp//mc;13764567708">拨打10086 </a>  <a href="wtai://wp/ap;13764567708;">将10086存储至电话簿 </a><br/>
 <a href="callto://Skype:+8613240020366">呼叫skype</a><br/><br/><br/>
-<script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
-<div id="call_32" style="width:20%;background-color:#0094ff">
-   <script type="text/javascript">
-        Skype.ui({
-            name: "call",
-            element: "call_32",
-            participants: ["echo123"],
-            imageSize: 32,
-            imageColor: "white"
-        });
-    </script>
-</div>
-<script>
+<script type="text/JavaScript">
+    checkInstalled = function(m) {
+        switch(m){
+            case 'msn':
+                try {
+                    new ActiveXObject("MSNMessenger.P4QuickLaunch");
+                    return true;
+                }
+                catch (e) {
+                    return false;
+                }
+            case 'qq':
+                try {
+                    new ActiveXObject("TimwpDll.TimwpCheck");
+                    return true;
+                }
+                catch (e) {
+                    return false;
+                }
+            case 'skype':
+                try{
+                    new ActiveXObject("Skype.Detection");
+                    return true;
+                }catch(e){
+                    return false;
+                }
+        }
+    }
 </script>
-
+<input type="button" value="检测有没有安装MSN" onclick="alert(checkInstalled('msn'))" />
+<input type="button" value="检测有没有安装QQ" onclick="alert(checkInstalled('qq'))" />
+<input type="button" value="检测有没有安装SKYPE" onclick="alert(checkInstalled('skype'))" />  
 </body>
 </html>
