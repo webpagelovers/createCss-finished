@@ -13,104 +13,26 @@
 <a href="wtai://wp//mc;13764567708">拨打10086 </a>  <a href="wtai://wp/ap;13764567708;">将10086存储至电话簿 </a><br/>
 <a href="skype:+8613240020366?call">呼叫skype</a><br/><br/><br/>
 </br></br></br></br></br></br>
-<a href="" id="aaa"></a>
+<script>
+if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+    var state = null;
+    try {
+        alert(0)
+        state = window.open("skype:+8613240020366?call", '_self');
+    } catch (e) {
+        alert(1)
+    }
+    if (state) {
+        alert(2)
+        window.close();
+    } else {
+        alert(3)
+        alert('aaaaaaaaaaaaaaaaaaaa')
+        //window.location = "skype:+8613240020366?call";
+    }
+}
+</script>
 
- <script type="text/javascript">
 
-        var timeout;
-        function open_iOS_App() {
-            if (isWeiXin()) {
-                open_App();
-            }else{
-                open_App();
-                timeout = setTimeout('open_itunes()', 3000);
-            };
-        }
-
-        function open_Android_App() {
-            if (isWeiXin()) {
-                open_android_weixin();
-            }else{
-                open_App_Android();
-            };
-        }
-
-        function open_android_weixin() {
-           var acti = document.getElementById("acti").value;
-           var linkUrl = "xxxxxxxxxxxxx://utils?action=sendIntent¶ms=" + acti;
-           var yingyongbaoUrl = "http://a.app.qq.com/o/simple?pkgname=com.xxxx.xxxxx&android_schema=" 
-            + encodeURI(linkUrl);
-           window.location = yingyongbaoUrl; 
-        }
-
-        function open_App() {
-
-                     var ver = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);  
-                     ver = parseInt(ver[1], 10);  
-                     if(ver<9)  
-                     {  
-                             if (isWeiXin()) {
-                                open_weixin_App();
-                             }else{
-                                open_itunes();
-                              }
-                      } else{
-                               var activity = document.getElementById("acti").value;  
-
-                               document.getElementById("aaa").href = "https://joeychang.me/s.html?params="+ encodeURI(activity);
-
-                               //  alert(document.getElementById("aaa").href);
-                               // alert(activity);
-                               document.getElementById("aaa").click();
-                      } 
-        }
-
-        function open_App_Android() {
-            var acti = document.getElementById("acti").value;
-            window.location = "intent://xxxxxxxxx?params="+ acti +"#Intent;package=com.xxxx.xxxxx;scheme=xxxxxxx;launchFlags=268435456;end;";    
-        }
-        function open_itunes() {/* 打开app store */
-            window.location="http://itunes.apple.com/cn/app/idxxxxxxxx"; 
-        }
-                function open_weixin_App() {/* 打开腾讯应用宝 间接跳转 */
-                var acti = document.getElementById("acti").value;
-            window.location="http://a.app.qq.com/o/simple.jsp?pkgname=com.xxxx.xxxxx&activity=" + acti; 
-        }
-
-        /*
-            判断是否是微信浏览器
-        */
-        function isWeiXin(){
-            var ua = window.navigator.userAgent.toLowerCase();
-            if(ua.match(/MicroMessenger/i) == 'micromessenger'){
-                return true;
-            }else{
-                return false;
-            }
-        }
-        function linktoApp() {
-                        var queryStr = decodeURI(window.location.search.substr(1));
-                        var ua = navigator.userAgent.toLowerCase(); 
-                        if (queryStr.indexOf("}") >= 0 && queryStr.indexOf("{") >= 0) {
-                              var activity = queryStr.substring(queryStr.indexOf("{"), queryStr.lastIndexOf("}") + 1);
-                              document.getElementById("acti").value = activity; 
-                             if (/iphone|ipad|ipod/.test(ua)) {
-                         // IOS
-                         } else if (/android/.test(ua)) {
-                        // Android
-                                open_Android_App();
-                         } else {
-                                // 其他浏览器
-                                window.location="http://a.app.qq.com/o/simple.jsp?pkgname=com.xxxxxxx.xxxxxxxx";
-                             }
-                         } else {
-                              document.getElementById("acti").value = "参数格式错误"; 
-                         }        
-        }
-
-        // 用js实现在加载完成一个页面后自动执行一个方法
-        /*用window.onload调用myfun()*/
-        window.onload=linktoApp;//不要括号
-    </script>
 </body>
 </html>
