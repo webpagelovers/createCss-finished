@@ -18,22 +18,15 @@ if (navigator.userAgent.match(/android/i)) {
     var state = null;
     try {
         alert(0)
-        //alert(0)
         state = window.open("skype:+8613240020366?call", '_blank');
     } catch (e) {
         alert(1)
-        //alert(1)
     }
     if (state) {
         alert(2)
-        //alert(2)
         window.close();
     } else {
-        alert(3)
-        alert('aaaaaaaaaaaaaaaaaaaa')
-        //alert(3)
-        //alert('aaaaaaaaaaaaaaaaaaaa')
-        //window.location = "skype:+8613240020366?call";
+        alert('未安装skype !')
     }
 }
 
