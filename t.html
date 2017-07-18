@@ -67,5 +67,40 @@ openApp("skype://",function(data){
     console.log(data)
 })
 </script>
+</br></br></br></br></br></br>
+<a class="js-skype-item">test skype</a>
+<script>
+$(".js-skype-item").on("click", function () {
+        testApp("skype:+8613240020366?call");
+    })
+
+    function testApp(url) {
+        if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+            var loadDateTime = new Date();
+            window.setTimeout(function () {
+                    var timeOutDateTime = new Date();
+                    if (timeOutDateTime - loadDateTime < 5000) {
+                        window.location = url;
+                    } else {
+                        window.close();
+                    }
+                },
+                25);
+            window.location = "skype:// ";
+        } else if (navigator.userAgent.match(/android/i)) {
+            var state = null;
+            try {
+                state = window.open(url, '_self');
+            } catch (e) {
+            }
+            if (state) {
+                window.close();
+            } else {
+                $.alert("Sorry, this application can not be found, please try the other options.", function () {
+                });
+            }
+        }
+    }
+</script>
 </body>
 </html>
