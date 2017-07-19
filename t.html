@@ -66,7 +66,7 @@ if (isAndroid) {
     document.body.appendChild(ifr);
     timeout = setTimeout(function () {
          var t2 = Date.now();
-         if (!t1 || t2 - t1 < t + 50) {
+         if (!t1 || t2 - t1 < t + 300) {
              hasApp = false;
          }
     }, t);
