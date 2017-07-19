@@ -16,7 +16,11 @@
 <a class="a1">呼叫skype</a><br/><br/><br/>
 <div class="a2"></div>
 <script>
-if (navigator.userAgent.match(/android/i)) {
+var u = navigator.userAgent;
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+//android终端
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+if (isAndroid) {
     var state = null;
     try {
         alert(0)
@@ -31,17 +35,9 @@ if (navigator.userAgent.match(/android/i)) {
     } else {
         alert('未安装skype !')
     }
+}else if(isiOS){
+    alert('isiOS');
 }
-
 </script>
-<script type="text/javascript">
-var u = navigator.userAgent;
-var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-//android终端
-var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-//ios终端
-$(".a2").html('是否是Android：' + isAndroid + '</br>是否是iOS：' + isiOS);
-</script>
-
 </body>
 </html>
