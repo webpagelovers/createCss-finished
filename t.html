@@ -12,7 +12,7 @@
 <a href="sms:13764567708">移动WEB页面JS一键发送短信咨询功能</a><br/>
 <a href="wtai://wp//mc;13764567708">拨打10086 </a>  <a href="wtai://wp/ap;13764567708;">将10086存储至电话簿 </a><br/>
 <a href="skype:+8613240020366?call">呼叫skype</a><br/><br/><br/>
-    <a href="javascript:testApp('skype:+8613240020366?call');" class="a3">dddddd</a>
+    <a href="javascript:testApp('skype:+8613240020366?call');">fdgfdgdfggf</a>
     </br></br></br>
     <a href="intent://www.kaola.com?call#Intent;scheme=kaola;S.browser_fallback_url=http%3A%2F%2Fapp.kaola.com;end">kala2</a>
     </br></br></br>
@@ -26,28 +26,6 @@
 </br></br>
 <div class="a2"></div>
 <script>
-var u = navigator.userAgent;
-var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-//android终端
-var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-if (isAndroid) {
-    var state = null;
-    try {
-        //alert(0)
-        //state = window.open("skype:+8613240020366?call", '_self')
-        //$(".a1").attr("href","skype:+8613240020366?call")      
-    } catch (e) {
-        //alert(1)
-    }
-    if (state) {
-        //alert(2)
-        window.close();
-    } else {
-        //alert('未安装skype !')
-    }
-}else if(isiOS){
-    alert('isiOS');
-}
     function testApp(url) {
     var timeout, t = 100, hasApp = true;
     setTimeout(function () {
