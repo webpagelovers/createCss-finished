@@ -12,7 +12,7 @@
 <a href="sms:13764567708">移动WEB页面JS一键发送短信咨询功能</a><br/>
 <a href="wtai://wp//mc;13764567708">拨打10086 </a>  <a href="wtai://wp/ap;13764567708;">将10086存储至电话簿 </a><br/>
 <a href="skype:+8613240020366?call">呼叫skype</a><br/><br/><br/>
-    <a href="intent://+aaa?call#Intent;scheme=kaola;S.browser_fallback_url=http%3A%2F%2Fapp.kaola.com;end">kala1</a>
+    <a href="javascript:testApp('skype:+8613240020366?call')">111111111</a>
     </br></br></br>
     <a href="intent://www.kaola.com?call#Intent;scheme=kaola;S.browser_fallback_url=http%3A%2F%2Fapp.kaola.com;end">kala2</a>
     </br></br></br>
@@ -48,6 +48,29 @@ if (isAndroid) {
 }else if(isiOS){
     alert('isiOS');
 }
+    function testApp(url) { 
+  var timeout, t = 1000, hasApp = true; 
+  setTimeout(function () { 
+    if (hasApp) { 
+      alert('安装了app'); 
+    } else { 
+      alert('未安装app'); 
+    } 
+    document.body.removeChild(ifr); 
+  }, 3000) 
+  
+  var t1 = Date.now(); 
+  var ifr = document.createElement("iframe"); 
+  ifr.setAttribute('src', url); 
+  ifr.setAttribute('style', 'display:none'); 
+  document.body.appendChild(ifr); 
+  timeout = setTimeout(function () { 
+     var t2 = Date.now(); 
+     if (!t1 || t2 - t1 < t + 100) { 
+       hasApp = false; 
+     } 
+  }, t); 
+} 
 </script>
 </body>
 </html>
