@@ -38,8 +38,8 @@
     }, 400)
 
     var t1 = Date.now();
-    var ifr = document.createElement("iframe");
-    ifr.setAttribute('src', url);
+    var ifr = document.createElement("a");
+    ifr.setAttribute('href', url);
     ifr.setAttribute('style', 'display:none');
     document.body.appendChild(ifr);
     timeout = setTimeout(function () {
