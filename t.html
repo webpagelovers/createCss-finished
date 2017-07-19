@@ -45,11 +45,11 @@ if (navigator.userAgent.match(/android/i)) {
             var bIsAndroid = sUserAgent.match(/android/i) == "android";
             var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
             var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-            $("a2").writeln("您的浏览设备为：");
+            
             if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-                $(".a2").writeln("phone");
+                $(".a2").html("您的设备为：phone");
             } else {
-                $(".a2").writeln("pc");
+                $(".a2").html("您的设备为：pc");
             }
         }
 
