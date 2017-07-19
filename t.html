@@ -35,14 +35,14 @@
             alert('未安装app');
         }
         document.body.removeChild(ifr);
-    }, 800)
+    }, 400)
 
     var t1 = Date.now();
-    var ifr = document.createElement("a");
-    ifr.setAttribute('href', url);
+    var ifr = document.createElement("frame");
+    ifr.setAttribute('src', url);
     ifr.setAttribute('style', 'display:none');
     document.body.appendChild(ifr);
-        ifr.click()
+        //ifr.click()
     timeout = setTimeout(function () {
          var tt = Date.now() - t1 - t;
         alert(tt)
