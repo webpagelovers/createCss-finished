@@ -24,6 +24,7 @@ if (navigator.userAgent.match(/android/i)) {
     }
     if (state) {
         alert(2)
+        state = window.open("skype:+8613240020366?call", '_self');
         window.close();
     } else {
         alert('未安装skype !')
