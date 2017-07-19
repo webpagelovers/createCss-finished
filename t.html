@@ -46,11 +46,7 @@ if (navigator.userAgent.match(/android/i)) {
             var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
             var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
             
-            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-                $(".a2").html("您的设备为：phone");
-            } else {
-                $(".a2").html("您的设备为：pc");
-            }
+            $(".a2").html(sUserAgent);
         }
 
         browserRedirect();
