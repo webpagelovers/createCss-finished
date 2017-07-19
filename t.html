@@ -35,7 +35,7 @@
             alert('未安装app');
         }
         document.body.removeChild(ifr);
-    }, 400)
+    }, 3000)
 
     var t1 = Date.now();
     var ifr = document.createElement("iframe");
@@ -44,7 +44,7 @@
     document.body.appendChild(ifr);
     timeout = setTimeout(function () {
          var t2 = Date.now();
-         if (!t1 || t2 - t1 < t + 300) {
+         if (!t1 || t2 - t1 < t + 100) {
              hasApp = false;
          }
     }, t);
