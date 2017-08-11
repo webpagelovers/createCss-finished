@@ -7,13 +7,14 @@
     <title>测试skype</title>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function() {
-            htmlobj = $.ajax({
-                url: "./t.html",
-                async: false
-            });
-            $("body").html(htmlobj.responseText);
-        });
+        $.ajax({  
+            type: "POST",  
+            url: "./t.html",  
+            data: "name=John&location=Boston",  
+            success: function(msg){  
+                alert( "Data Saved: " + msg );  
+            }  
+        });   
     </script>
 </head>
 <body>
