@@ -6,16 +6,15 @@
     <meta http-equiv="x-rim-auto-match" content="none">
     <title>测试skype</title>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-       $(document).ready(function(){
-            htmlobj=$.ajax({url:"/jquery/test1.txt",async:false});
-                $("#myDiv").html(htmlobj.responseText);
-            });
-       });
+    $(document).ready(function() {
+        htmlobj = $.ajax({
+            url: "./t.html",
+            async: false
+        });
+        $("body").html(htmlobj.responseText);
+    });
 </script>
-
 </head>
 <body>
-    
 </body>
 </html>
